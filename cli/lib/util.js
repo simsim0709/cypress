@@ -396,8 +396,11 @@ const util = {
     la(is.unemptyString(varName), 'expected environment variable name, not', varName)
 
     const envVar = process.env[varName]
+    console.log("TCL: getEnv -> envVar", envVar)
     const configVar = process.env[`npm_config_${varName}`]
+    console.log("TCL: getEnv -> configVar", configVar)
     const packageConfigVar = process.env[`npm_package_config_${varName}`]
+    console.log("TCL: getEnv -> packageConfigVar", packageConfigVar)
 
     let result
 
